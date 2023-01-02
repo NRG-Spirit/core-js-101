@@ -155,7 +155,6 @@ function retry(func, attempts) {
  *
  */
 function logger(func, logFunc) {
-  console.log('Func ', func);
   return (...args) => {
     const str = JSON.stringify(args).slice(1, -1);
     logFunc(`${func.name}(${str}) starts`);
